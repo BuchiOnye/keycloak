@@ -17,16 +17,14 @@ pipeline {
       steps{
         docker('docker'){
           sh 'docker version'
+          sh 'docker image list'
         }
-        dockerHome = tool 'docker'
-        env.PATH = "${dockerHome}/bin:${env.PATH}"
       }
     }
     
     stage("Docker build") {
       steps{
-        sh 'docker version'
-        sh 'docker image list'
+        
       }
     }
     
