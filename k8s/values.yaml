@@ -1,0 +1,25 @@
+name: "provider-keycloak"
+app: "keycloak"
+image: "093778529041.dkr.ecr.us-east-1.amazonaws.com/keycloak:18.0.0"
+datasource: ""
+replicas: 3
+
+# resource requirements
+resources:
+  limits:
+    cpu: 1000m
+    memory: 1.7Gi
+  requests:
+    cpu: 100m
+    memory: 1Gi
+
+
+# k8s ingress
+ingressClass: nginx
+
+# service spec
+service:
+  hostname: "auth.keycloak.io"
+  targetPort: 8080
+
+
