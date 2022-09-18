@@ -15,7 +15,7 @@ pipeline {
     
     stage("Initialize"){ 
       steps{
-        Docker('docker_latest'){
+        docker('docker_latest'){
           sh 'docker version'
           sh 'docker image list'
         }
