@@ -22,12 +22,6 @@ pipeline {
       }
     }
     
-    stage("Docker build") {
-      steps{
-        
-      }
-    }
-    
     stage("deploy") {
       steps {
         echo 'deploying the portfolio app ...'
