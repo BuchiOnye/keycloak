@@ -13,6 +13,11 @@ pipeline {
       }
     }
     
+    stage("Docker build"){
+        sh 'docker version'
+        sh 'docker image list'
+    }
+    
     stage("deploy") {
       steps {
         echo 'deploying the portfolio app ...'
